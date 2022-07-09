@@ -1,0 +1,8 @@
+---
+- name: installed docker for [ubuntu] and [debian] task yaml
+  include: debian.yml
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+- name: installed docker for [rhel] task yaml
+  include: rhel.yml
+  when: ansible_distribution != "Ubuntu" or ansible_distribution != "Debian"

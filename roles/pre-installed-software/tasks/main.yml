@@ -1,0 +1,4 @@
+---
+- name: pre installed software task yaml
+  include: debian.yml
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
