@@ -1,0 +1,11 @@
+---
+- name: setted up docker enviroment
+  hosts: docker-servers
+  gather_facts: True
+  remote_user: "{{ deploy_user }}"
+  become: yes
+
+  roles:
+    - { role: pre-installed-software, tags: "pre-installed-software" }
+    - { role: security, tags: "security" }
+    - { role: docker, tags: "docker" }

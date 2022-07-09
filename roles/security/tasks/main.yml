@@ -2,3 +2,6 @@
 - name: installed docker for rhel family task yaml
   include: rhel.yml
   when: ansible_os_family == "RedHat"
+
+- name: reboot to disable SELinux
+  reboot:
