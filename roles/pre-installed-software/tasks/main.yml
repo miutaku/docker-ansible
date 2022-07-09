@@ -1,4 +1,4 @@
 ---
-- name: pre installed software task yaml
+- name: installed docker for debian family task yaml
   include: debian.yml
-  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+  when: ansible_os_family == "Debian"
