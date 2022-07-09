@@ -1,0 +1,24 @@
+---
+- name: added gpg key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: added apt repository
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+    state: present
+
+- name: apt updated
+  apt:
+    update_cache: yes
+
+- name: installed docker packages
+  apt:
+    name: "{{ items }}"
+    state: present
+  with_items:
+    - "docker-ce-{{ docker-ce_ver }}"
+    - "docker-ce-cli-{{ docker-ce_ver }}"
+    - "containerd.io-{{ containerd-io_ver }}"
+    - "docker-compose-plugin-{{ docker-compose_ver }}"
