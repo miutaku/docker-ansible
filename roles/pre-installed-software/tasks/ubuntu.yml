@@ -1,0 +1,15 @@
+---
+- name: apt updated
+  apt:
+    update_cache: yes
+
+- name: pre installed software
+  apt:
+    name: "{{ items }}"
+    state: present
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg-agent
+    - software-properties-common
