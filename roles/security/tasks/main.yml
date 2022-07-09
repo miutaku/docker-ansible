@@ -1,0 +1,4 @@
+---
+- name: diable selinux task yaml
+  include: disable_selinux.yml
+  when: ansible_distribution != "Ubuntu" or ansible_distribution != "Debian"
