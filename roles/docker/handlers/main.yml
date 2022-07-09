@@ -9,3 +9,9 @@
     name: "{{ docker_user }}"
     group: docker
     append: yes
+
+- name: started docker
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
