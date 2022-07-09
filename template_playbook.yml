@@ -4,5 +4,5 @@
   remote_user: hogeuser
   become: yes
   roles:
-    - { role: sample-role, tags: "sample-role" }
+    - { role: role1, tags: "role1" }
 
