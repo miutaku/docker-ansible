@@ -16,10 +16,10 @@
 - name: installed docker packages
   apt:
     name:
-      - "docker-ce-{{ docker-ce_ver }}"
-      - "docker-ce-cli-{{ docker-ce_ver }}"
-      - "containerd.io-{{ containerd-io_ver }}"
-      - "docker-compose-plugin-{{ docker-compose_ver }}"
+      - "docker-ce={{ docker-ce_ver }}"
+      - "docker-ce-cli={{ docker-ce_ver }}"
+      - "containerd.io={{ containerd-io_ver }}"
+      - "docker-compose-plugin={{ docker-compose_ver }}"
     state: present
   notify:
     - created docker group
