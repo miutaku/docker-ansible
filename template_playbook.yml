@@ -1,8 +1,0 @@
-- name: sample playbook
-  hosts: sample-server
-  gather_facts: True
-  remote_user: hogeuser
-  become: yes
-  roles:
-    - { role: role1, tags: "role1" }
-
