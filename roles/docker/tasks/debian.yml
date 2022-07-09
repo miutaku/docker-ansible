@@ -15,13 +15,12 @@
 
 - name: installed docker packages
   apt:
-    name: "{{ items }}"
+    name:
+      - "docker-ce-{{ docker_ce_ver }}"
+      - "docker-ce-cli-{{ docker_ce_ver }}"
+      - "containerd.io-{{ containerd_io_ver }}"
+      - "docker-compose-plugin-{{ docker_compose_ver }}"
     state: present
-  with_items:
-    - "docker-ce-{{ docker-ce_ver }}"
-    - "docker-ce-cli-{{ docker-ce_ver }}"
-    - "containerd.io-{{ containerd-io_ver }}"
-    - "docker-compose-plugin-{{ docker-compose_ver }}"
   notify:
     - created docker group
     - added "{{ docker_user }}" to docker group
