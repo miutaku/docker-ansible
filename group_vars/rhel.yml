@@ -1,4 +1,0 @@
-# docker env
-docker-ce_ver: "20.10.17-3"
-containerd-io_ver: "1.6.6-3.1"
-docker-compose_ver: "2.6.0-3"
