@@ -10,6 +10,11 @@
     group: docker
     append: yes
 
+- name: pushed ssh pub key for "{{ docker_user }}"
+  template:
+    src: docker_id_rsa.pub.j2
+    dest: "/home/{{ docker_user }}"
+
 - name: started docker
   systemd:
     name: docker
