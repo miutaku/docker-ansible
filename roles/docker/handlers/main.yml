@@ -10,6 +10,14 @@
     group: docker
     append: yes
 
+- name: pushed ssh pub key for "{{ docker_user }}"
+  template:
+    src: docker_id_rsa.pub.j2
+    dest: "/home/{{ docker_user }}/.ssh/authorized_keys"
+    owner: "{{ docker_user }}"
+    group: "{{ docker_user }}"
+    mode: 0400
+
 - name: started docker
   systemd:
     name: docker

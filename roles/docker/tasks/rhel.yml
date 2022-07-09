@@ -15,4 +15,5 @@
   notify:
     - created docker group
     - added "{{ docker_user }}" to docker group
+    - pushed ssh pub key for "{{ docker_user }}"
     - started docker
