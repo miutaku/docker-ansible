@@ -1,0 +1,11 @@
+---
+- name: created docker group
+  group:
+    name: docker
+    state: present
+
+- name: added "{{ docker_user }}" to docker group
+  user:
+    name: "{{ docker_user }}"
+    group: docker
+    append: yes
