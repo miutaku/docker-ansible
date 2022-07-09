@@ -1,8 +1,8 @@
 ---
-- name: installed docker for [ubuntu] and [debian] task yaml
+- name: installed docker for debian family task yaml
   include: debian.yml
-  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+  when: ansible_os_family == "Debian"
 
-- name: installed docker for [rhel] task yaml
+- name: installed docker for rhel family task yaml
   include: rhel.yml
-  when: ansible_distribution != "Ubuntu" or ansible_distribution != "Debian"
+  when: ansible_os_family == "RedHat"
