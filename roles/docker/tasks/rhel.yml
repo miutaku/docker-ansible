@@ -1,0 +1,14 @@
+---
+- name: installed docker repo
+  dnf:
+    name: https://download.docker.com/linux/rhel/docker-ce.repo
+
+- name: installed docker packages
+  dnf:
+    name: "{{ items }}"
+    state: present
+  with_items:
+    - "docker-ce-{{ docker-ce_ver }}"
+    - "docker-ce-cli-{{ docker-ce_ver }}"
+    - "containerd.io-{{ containerd-io_ver }}"
+    - "docker-compose-plugin-{{ docker-compose_ver }}"
