@@ -1,0 +1,8 @@
+- name: test task
+  debug:
+    msg: "this is test task."
+
+- name: test template
+  template:
+    src: hoge.j2
+    dest: /tmp/hogefile.txt
