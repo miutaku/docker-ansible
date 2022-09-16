@@ -7,4 +7,3 @@ docker_compose_ver: "2.6.0-3"
 deploy_user: m1u7aku
 # docker env
 docker_user: docker-user
-docker_user_id_rsa_pub: !vault |
