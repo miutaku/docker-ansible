@@ -21,7 +21,3 @@
       - "containerd.io={{ containerd-io_ver }}"
       - "docker-compose-plugin={{ docker-compose_ver }}"
     state: present
-  notify:
-    - created docker group
-    - added "{{ docker_user }}" to docker group
-    - pushed ssh pub key for "{{ docker_user }}"
