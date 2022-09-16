@@ -1,7 +1,7 @@
 ---
 - name: installed docker repo
   get_url:
-    url: 'https://download.docker.com/linux/rhel/docker-ce.repo'
+    url: 'https://download.docker.com/linux/centos/docker-ce.repo'
     dest: /etc/yum.repos.d/
 
 - name: installed docker packages
