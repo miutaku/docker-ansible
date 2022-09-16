@@ -9,7 +9,6 @@
     name:
       - "docker-ce-{{ docker_ce_ver }}"
       - "docker-ce-cli-{{ docker_ce_ver }}"
-      - "containerd.io-{{ containerd_io_ver }}"
       - "docker-compose-plugin-{{ docker_compose_ver }}"
     state: present
   notify:
