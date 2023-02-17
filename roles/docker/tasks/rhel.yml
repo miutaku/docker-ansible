@@ -10,4 +10,16 @@
       - "docker-ce-{{ docker_ce_ver }}"
       - "docker-ce-cli-{{ docker_ce_ver }}"
       - "docker-compose-plugin-{{ docker_compose_ver }}"
+      - python3-pip
+    state: present
+
+- name: upgraded pip
+  pip:
+    name: pip
+    executable: pip3
+    state: latest
+
+- name: installed docker-compose
+  pip:
+    name: docker-compose
     state: present
