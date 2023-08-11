@@ -1,6 +1,6 @@
 # docker-version
-docker_ce_ver: "20.10.17-3"
-docker_compose_ver: "2.6.0-3"
+docker_ce_ver: "23.0.1"
+docker_compose_ver: "2.16.0"
 
 # user
 #deploy_user: deploy-user
